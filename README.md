@@ -4,7 +4,8 @@
 
 # Sintaxis & Compás
 
-### Donde el código encuentra su propio compás. Programar también es componer.
+### Donde el código encuentra su propio compás.
+Programar también es componer.
 
 <br/>
 
@@ -17,7 +18,7 @@
 
 <br/>
 
-**_Donde el código encuentra su propio compás. Programar también es componer._**
+
 
 </div>
 
@@ -320,9 +321,10 @@ docs: añadir README técnico de alta fidelidad con arquitectura completa
 
 <div align="center">
 
-### Donde el código encuentra su propio compás. Programar también es componer.
+### Donde el código encuentra su propio compás. 
+Programar también es componer.
 
-**Sintaxis & Compás** — © 2026 Patricia Aparicio Díaz · con Carlos Márquez y Patricia Aparicio como anfitriones
+**Sintaxis & Compás** — © 2026 Patricia Aparicio Díaz · 
 
 ![badge](https://img.shields.io/badge/hecho_con_-cian_y_magenta-06b6d4?style=flat-square&labelColor=d946ef)
 
