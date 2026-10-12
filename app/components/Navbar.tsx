@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "Inicio", href: "/" },
@@ -196,19 +198,81 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Botón de acción */}
-        <div className="flex items-center gap-3">
+        {/* Botón de acción + Menú móvil */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href="https://spotify.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-4 py-2 text-xs font-black tracking-wide text-[#06070e] shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_28px_rgba(217,70,239,0.65),0_0_12px_rgba(6,182,212,0.6)] sm:text-sm"
+            className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-4 py-2 text-xs font-black tracking-wide text-[#06070e] shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_28px_rgba(217,70,239,0.65),0_0_12px_rgba(6,182,212,0.6)] sm:text-sm"
           >
             <span>Escuchar en Spotify</span>
             <span className="text-xs">↗</span>
           </a>
+
+          {/* Botón hamburguesa móvil */}
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-[#06070e] text-zinc-300 transition-all duration-200 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-2 focus:ring-cyan-400 md:hidden"
+            aria-expanded={isMobileMenuOpen}
+            aria-label={isMobileMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+          >
+            {isMobileMenuOpen ? (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Menú móvil desplegable */}
+      {isMobileMenuOpen && (
+        <nav
+          className="border-t border-cyan-500/20 bg-[#06070e]/95 px-6 py-4 backdrop-blur-2xl transition-all duration-200 md:hidden"
+          aria-label="Navegación móvil"
+        >
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? "border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 font-semibold shadow-[0_0_15px_rgba(6,182,212,0.2)]"
+                      : "text-zinc-300 hover:border hover:border-zinc-700/60 hover:bg-zinc-800/40 hover:text-white"
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {isActive ? (
+                    <span className="font-mono text-xs text-cyan-400">● activo</span>
+                  ) : (
+                    <span className="text-zinc-600">→</span>
+                  )}
+                </Link>
+              );
+            })}
+            <a
+              href="https://spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 py-3 text-xs font-black tracking-wide text-[#06070e] shadow-[0_0_15px_rgba(6,182,212,0.35)] sm:hidden"
+            >
+              <span>Escuchar en Spotify</span>
+              <span className="text-xs">↗</span>
+            </a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
