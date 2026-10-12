@@ -339,6 +339,17 @@ docs: añadir README técnico de alta fidelidad con arquitectura completa
 
 ---
 
+### **Patricia Aparicio Díaz**
+
+*Software Engineer · Clean Code & Modern Web*
+
+<br/>
+
+[![GitHub](https://img.shields.io/badge/GitHub-apariciodiazpatricia--cell-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/apariciodiazpatricia-cell)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Patricia_Aparicio_D%C3%ADaz-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patriciaapariciodiaz/)
+
+<br/>
+
 <div align="center">
 
 ### Donde el código encuentra su propio compás. 
