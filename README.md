@@ -338,6 +338,15 @@ docs: añadir README técnico de alta fidelidad con arquitectura completa
 ```
 
 ---
+<div align="center">
+  
+## 👩‍💻 Autora y Contacto
+
+<br/>
+
+<a href="https://github.com/apariciodiazpatricia-cell">
+  <img src="https://github.com/apariciodiazpatricia-cell.png?size=130" alt="Foto de perfil de Patricia Aparicio Díaz en GitHub" width="130" />
+</a>
 
 ### **Patricia Aparicio Díaz**
 
