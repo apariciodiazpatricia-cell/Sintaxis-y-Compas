@@ -93,7 +93,7 @@ podcast-espanol/
 ├── app/
 │   ├── components/
 │   │   ├── AudioPlayer.tsx      # Reproductor HTML5 + ecualizador + temas clave
-│   │   ├── Navbar.tsx           # Navegación con logotipo SVG neón
+│   │   ├── Navbar.tsx           # Navegación con logotipo SVG neón y menú móvil
 │   │   ├── Footer.tsx           # Canales: Spotify, Apple, YouTube, iVoox
 │   │   ├── CategoryChip.tsx     # Chips de categoría reutilizables
 │   │   └── PlatformIcons.tsx    # Iconos y enlaces de plataformas
@@ -105,8 +105,14 @@ podcast-espanol/
 │   ├── globals.css              # Cyber-Studio Grid + tokens @theme
 │   ├── layout.tsx               # Shell: Navbar + Footer + metadata
 │   └── page.tsx                 # Portada
+├── specs/                       # Especificación guiada paso a paso (SDD)
+│   ├── 01-constitution.md       # Principios rectores y calidad
+│   ├── 02-specify.md            # El QUÉ (especificación sin stack)
+│   ├── 03-clarify.md            # Decisiones y dudas resueltas
+│   ├── 04-plan.md               # El CÓMO (arquitectura técnica + stack)
+│   └── 05-tasks.md              # Desglose de tareas y trazabilidad BDD
 ├── public/
-├── ├── audio/                   # ep-01…ep-04 (.m4a + red .mp3) — NotebookLM
+│   ├── audio/                   # ep-01…ep-04 (.m4a + red .mp3) — NotebookLM
 │   └── banner.svg               # Cabecera animada de este README
 ├── tests/bdd/                   # Especificaciones Gherkin
 ├── next.config.ts
@@ -126,6 +132,20 @@ npm run start   # servidor de producción
 ```
 
 > Para publicar un nuevo episodio: suelta su archivo en `public/audio/ep-0X.m4a` y añade su objeto en `app/data/episodes.ts`. El reproductor lo detecta solo.
+
+---
+
+## 📐 Especificación y Metodología (SDD)
+
+El proyecto se diseñó e implementó siguiendo una metodología de desarrollo guiada por especificaciones (**Spec-Driven Development**), documentada en cinco fases previas a la construcción del código:
+
+| Fase | Documento maestro | Propósito y regla de oro |
+|---|---|---|
+| **1. Constitution** | [`specs/01-constitution.md`](./specs/01-constitution.md) | Principios innegociables: accesibilidad WCAG 2.2 AA, audio web nativo, arquitectura limpia y paleta Cyber-Studio. |
+| **2. Specify** | [`specs/02-specify.md`](./specs/02-specify.md) | **El QUÉ funcional**: casos de uso CU-1 a CU-4 *(estrictamente sin mención de frameworks ni librerías)*. |
+| **3. Clarify** | [`specs/03-clarify.md`](./specs/03-clarify.md) | Decisiones y dudas clave resueltas antes del desarrollo (fallback .m4a ↔ .mp3, cálculo de tiempos, reactividad). |
+| **4. Plan** | [`specs/04-plan.md`](./specs/04-plan.md) | **El CÓMO + Stack**: arquitectura técnica Next.js 16.4, React 19, TypeScript estricto, Tailwind v4 y Web Audio API. |
+| **5. Tasks • Analyze** | [`specs/05-tasks.md`](./specs/05-tasks.md) | Desglose de 23 tareas (T-01 a T-23) ordenadas por fases y vinculadas directamente con los escenarios BDD. |
 
 ---
 
