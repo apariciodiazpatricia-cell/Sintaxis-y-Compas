@@ -163,7 +163,7 @@ export default function ContactoPage() {
 
                 <div className="relative mx-auto max-w-6xl px-6 pb-8 pt-14 sm:pt-16">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-300">
-                        // canal abierto
+                        {"// canal abierto"}
                     </span>
 
                     <h1 className="mt-5 bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400 bg-clip-text text-4xl font-black leading-tight tracking-tight text-transparent drop-shadow-[0_0_22px_rgba(6,182,212,0.35)] sm:text-5xl">
@@ -237,7 +237,7 @@ export default function ContactoPage() {
                                 className="rounded-2xl border border-cyan-500/20 bg-[#0a0c18]/70 p-6 backdrop-blur-sm sm:p-8"
                             >
                                 <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">
-                                    // envía una señal
+                                    {"// envía una señal"}
                                 </h2>
 
                                 <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -371,7 +371,7 @@ export default function ContactoPage() {
                     {/* Comunidad */}
                     <div className="lg:col-span-5">
                         <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-fuchsia-400">
-                            // comunidad
+                            {"// comunidad"}
                         </h2>
                         <p className="mt-3 text-sm leading-relaxed text-zinc-400">
                             El show no termina cuando se corta el audio. Estos son los tres sitios

@@ -65,7 +65,7 @@ export default function EpisodiosPage() {
 
                 <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-14 sm:pt-16">
                     <span className="inline-flex items-center gap-2 rounded-full border border-fuchsia-500/40 bg-fuchsia-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.25em] text-fuchsia-300">
-                        // archivo de audio
+                        {"// archivo de audio"}
                     </span>
 
                     <h1 className="mt-5 bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400 bg-clip-text text-4xl font-black leading-tight tracking-tight text-transparent drop-shadow-[0_0_22px_rgba(6,182,212,0.35)] sm:text-5xl">

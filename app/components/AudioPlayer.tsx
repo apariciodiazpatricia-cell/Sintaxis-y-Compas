@@ -329,7 +329,6 @@ export default function AudioPlayer({
             shouldPlayRef.current = false;
             tryPlay();
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [episode]);
 
     /* Preferencias de reproducción */

@@ -87,7 +87,7 @@ export default function SobrePage() {
 
                 <div className="relative mx-auto max-w-6xl px-6 pb-10 pt-14 sm:pt-16">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-300">
-                        // sobre el show
+                        {"// sobre el show"}
                     </span>
 
                     <h1 className="mt-5 bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400 bg-clip-text text-4xl font-black leading-tight tracking-tight text-transparent drop-shadow-[0_0_22px_rgba(6,182,212,0.35)] sm:text-5xl">
@@ -106,7 +106,7 @@ export default function SobrePage() {
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
                     <div className="md:col-span-7">
                         <span className="font-mono text-xs uppercase tracking-[0.3em] text-fuchsia-400">
-                            // manifiesto
+                            {"// manifiesto"}
                         </span>
                         <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
                             Por qué programar también es componer música
@@ -156,7 +156,7 @@ export default function SobrePage() {
             <section className="mx-auto max-w-6xl px-6 py-10">
                 <div className="border-b border-cyan-500/15 pb-6">
                     <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">
-                        // los anfitriones
+                        {"// los anfitriones"}
                     </span>
                     <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
                         Dos voces, una cabina
@@ -207,7 +207,7 @@ export default function SobrePage() {
             <section className="mx-auto max-w-6xl px-6 py-10 pb-20">
                 <div className="border-b border-cyan-500/15 pb-6">
                     <span className="font-mono text-xs uppercase tracking-[0.3em] text-fuchsia-400">
-                        // nuestro stack &amp; estudio
+                        {"// nuestro stack & estudio"}
                     </span>
                     <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
                         Con qué grabamos y con qué codificamos

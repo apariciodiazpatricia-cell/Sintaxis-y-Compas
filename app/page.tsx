@@ -67,7 +67,7 @@ export default function Home() {
                 <header className="flex flex-col gap-3 border-b border-cyan-500/15 pb-6 sm:flex-row sm:items-end sm:justify-between">
                     <div>
                         <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">
-                            // últimos episodios
+                            {"// últimos episodios"}
                         </span>
                         <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
                             Cuatro pistas para tu oído
@@ -159,7 +159,7 @@ export default function Home() {
             <section className="mx-auto max-w-6xl px-6 pb-20">
                 <header className="border-b border-cyan-500/15 pb-6">
                     <span className="font-mono text-xs uppercase tracking-[0.3em] text-fuchsia-400">
-                        // plataformas de transmisión
+                        {"// plataformas de transmisión"}
                     </span>
                     <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
                         Escúchanos donde prefieras
